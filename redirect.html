@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<h1>Waiting...</h1>
 <script>
 const urlParams = new URLSearchParams(window.location.search);
 const redirect = urlParams.get('redirect');
 
-window.location.href = redirect;
+if(new URL(redirect).hostname == window.location.hostname)
+  window.location.href = redirect;
 
 </script>
 
