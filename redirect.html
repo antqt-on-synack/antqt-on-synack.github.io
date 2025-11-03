@@ -4,7 +4,7 @@
 <h1>Waiting...</h1>
 <script>
 const urlParams = new URLSearchParams(window.location.search);
-const redirect = urlParams.get('redirect');
+const redirect = urlParams.get('redirect') || window.location.hash.substring(1);
 
 if(new URL(redirect).hostname == window.location.hostname)
   window.location.href = redirect;
