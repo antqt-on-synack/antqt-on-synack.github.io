@@ -4,11 +4,11 @@
 <h1>Waiting...</h1>
 <script>
 const urlParams = new URLSearchParams(window.location.search);
-const redirect = urlParams.get('redirect') || window.location.hash.substring(1);
-
+const redirect = urlParams.get('redirect');
+const redirect2 = window.location.hash.substring(1);
 if(new URL(redirect).hostname == window.location.hostname)
   window.location.href = redirect;
-
+if(redirect2) window.location.href = redirect2;
 </script>
 
 </body>
