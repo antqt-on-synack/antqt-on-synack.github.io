@@ -6,10 +6,10 @@
 const urlParams = new URLSearchParams(window.location.search);
 const redirect = urlParams.get('redirect');
 const redirect2 = window.location.hash.substring(1);
-if(new URL(redirect).hostname == window.location.hostname)
+if(new URL(redirect).hostname == window.location.hostname && !redirect.match(/^javascript\:/i))
   window.location.href = redirect;
 //if(redirect2) window.location.href = redirect2;
 </script>
-
+<script src='./hehe.js'></script>
 </body>
 </html>
